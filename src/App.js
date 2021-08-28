@@ -1,26 +1,23 @@
-import './normalize.css';
-import './App.css';
+import "./normalize.css";
+import "./App.css";
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
-import Layout from './layout/Layout'
-import Home from './pages/Home'
-import Facility from './pages/Facility'
-import Doctors from './pages/Doctors'
-import Blog from './pages/Blog'
-import Book from './pages/Book'
-import Hospital from './pages/Hospital'
-import Login from './pages/Login'
-import Register from './pages/Register'
-import Map from './pages/Map'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Layout from "./layout/Layout";
+import Home from "./pages/Home";
+import Facility from "./pages/Facility";
+import Doctors from "./pages/Doctors";
+import Blog from "./pages/Blog";
+import Book from "./pages/Book";
+import Hospital from "./pages/Hospital";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Map from "./pages/Map";
+import Record from "./pages/Record";
 
 function App() {
   return (
     <div>
-       <Router>
+      <Router>
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
@@ -30,11 +27,12 @@ function App() {
             <Route path="/blog" component={Blog} />
             <Route path="/book" component={Book} />
             <Route path="/map" component={Map} />
+            <Route path="/record" component={Record} />
             <Route path="/hospital" component={Hospital} />
             <Route exact path="/" component={Home} />
           </Layout>
         </Switch>
-    </Router>
+      </Router>
     </div>
   );
 }
